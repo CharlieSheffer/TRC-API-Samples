@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js">
+</script>
+
+<style type="text/css">
+.OkUpload {background-color: #adffb6;}
+.PreUpload {background-color: #ffdada;}
+.OtherUpload {background-color: #c1f8ff;}
+</style>
+
+<script src="BasicList.js"> </script>
+<script src="TRC.js"> </script>
+
+<script type=text/javascript>
+    Init();
+</script>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Simple Demo of TRC Rest APIs</title>
+    </head>
+    <body>
+        <h1>Simple Demo of TRC Rest APIs</h1>
+        <p>
+            This is a HTML+JQuery demo of the TRC REST APIs. Access a specific sheet by providing a "canvas code" for that sheet.             
+        </p>
+
+        <h2>Enter your canvas code:</h2>
+        <table>
+            <tr><td>Login URL</td><td><input size=80 type=text id="loginurl" value="https://trc-login.voter-science.com"></input></td></tr>
+            <tr><td>Canvas code:</td><td><input type=text id=code placeholder="abc123" value="SGYZC4CH"></input></td></tr>
+        </table>
+        <button onclick="OnClick_AccessCodeAndLoadSheet()" value="Load">Load sheet!</button>        
+
+        <h2>Basic sheet information:</h2>
+        <table>
+            <tr><td>Name:</td><td><div id="SheetName"></div></td></tr>
+            <tr><td>Parent:</td><td><div id="ParentSheetName"></div></td></tr>
+            <tr><td>Version:</td><td><div id="SheetVer"></div></td></tr>        
+            <tr><td>Total Rows:</td><td><div id="RowCount"></div></td></tr>        
+        </table>
+
+        <h2>Sheet contents</h2>
+        You can edit the 'Comments' field next to each name. 
+        When you make a change, the cell starts off red. When the change is successfully saved to the server, the cell turns green. 
+        <table id="main" border=1>
+        <thead><tr>
+            <td>RecId</td>
+            <td>FirstName</td>
+            <td>LastName</td>
+            <td>Lat</td>
+            <td>Long</td>
+            <td>Comments</td>
+        </tr></thead>
+        </table>
+
+        <p>Page version: <div id="ver"></div></p>
+    </body>
+</html>
