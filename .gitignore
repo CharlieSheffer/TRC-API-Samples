@@ -1,0 +1,7 @@
+/*.user
+bin
+obj
+*.map
+*.user
+
+/*.suo

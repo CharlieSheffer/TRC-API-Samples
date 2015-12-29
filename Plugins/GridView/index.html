@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js">
+</script>
+
+<style type="text/css">
+    .OkUpload {
+        background-color: #adffb6;
+    }
+
+    .PreUpload {
+        background-color: #ffdada;
+    }
+
+    .OtherUpload {
+        background-color: #c1f8ff;
+    }
+</style>
+
+<script src="GridView.js"> </script>
+<script src="https://trcanvasdata.blob.core.windows.net/code/trc.js"> </script>
+<script src="https://trcanvasdata.blob.core.windows.net/code/plugin.js"></script>
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Simple Demo of TRC Rest APIs</title>
+</head>
+<body>
+    <p>
+        General-purpose Grid display for any TRC sheet. 
+    </p>
+
+    <h2>Sheet contents</h2>
+    When you make a change, the cell starts off red. When the change is successfully saved to the server, the cell turns green.
+    <table id="main" border=1>
+      
+    </table>
+
+    <p>Page version: <div id="ver"></div></p>
+</body>
+</html>
